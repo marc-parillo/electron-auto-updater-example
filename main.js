@@ -34,10 +34,21 @@ function createWindow() {
   });
 
   autoUpdater.setFeedURL({
+
     'provider': 'github',
+
+    // your github username
     'owner': 'nbcnc',
-    'repo': 'updater',
+
+    // your github private repo
+    'repo': 'electron-auto-updater-example',
+
+    // This is an example of what a personal access token from github would look like
+    // BE CAREFUL!  Anyone with this token has read/write access to your private and public repos
+    // Anyone who unpacks the asar file of your Electron app will see this token in plain text
     'token': '29444d5e380e63ef21cb2e11423a5a7934bd1bf7'
+    // Oh, and this is NOT MY REAL ACCESS TOKEN
+
   });
 
   autoUpdater.checkForUpdates();

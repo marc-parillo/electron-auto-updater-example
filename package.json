@@ -1,11 +1,11 @@
 {
-  "name": "updater",
+  "name": "electron-auto-updater-example",
   "version": "0.1.0",
   "main": "main.js",
-  "description": "updater",
+  "description": "Example of how to structure an app to update from a private github repo",
   "author": "Marc Parillo",
   "copyright": "2017 Marc Parillo",
-  "productName": "updater",
+  "productName": "Electron Auto Updater Example",
   "devDependencies": {
     "electron": "^1.6.2",
     "electron-builder": "^17.0.1"
