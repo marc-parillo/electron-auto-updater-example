@@ -1,0 +1,44 @@
+{
+  "name": "updater",
+  "version": "0.1.0",
+  "main": "main.js",
+  "description": "updater",
+  "author": "Marc Parillo",
+  "copyright": "2017 Marc Parillo",
+  "productName": "updater",
+  "devDependencies": {
+    "electron": "^1.6.2",
+    "electron-builder": "^17.0.1"
+  },
+  "dependencies": {
+    "electron-log": "^1.3.0",
+    "electron-updater": "^1.14.0"
+  },
+  "build": {
+    "appId": "com.github.nbcnc.updater",
+    "copyright": "2017 Marc Parillo",
+    "mac": {
+      "category": "public.app-category.business",
+      "icon": "./assets/icons/mac/nbc.icns",
+      "target": [
+        "zip",
+        "dmg"
+      ]
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "./assets/icons/win/nbc.ico"
+    },
+    "nsis": {
+      "oneClick": true,
+      "artifactName": "${productName}-Installer-${version}-${arch}.${ext}"
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "nbcnc",
+        "repo": "updater"
+      }
+    ]
+  }
+}
